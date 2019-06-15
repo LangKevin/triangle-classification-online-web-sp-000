@@ -70,6 +70,7 @@ class Triangle
     end
   end
   class TriangleError < StandardError
-
+    def message
+      "Invalid triangles"
   end
 end
