@@ -5,7 +5,9 @@ class Triangle
     @side1 = side1
     @side2 = side2
     @side3 = side3
-    self.kind
+    if !isEquilateral || !isIsosceles || !isScalene
+      raise TriangleError
+    end
   end
   def aboveZero
     if side1 > 0 && side2 >0 && side3 > 0
@@ -61,13 +63,13 @@ class Triangle
       return :isosceles
     elsif isScalene
       return :scalene
-    else
-        begin
-            raise TriangleError
-            rescue TriangleError => error
-                puts error
-        end
-
+    # else
+    #     begin
+    #         raise TriangleError
+    #         # rescue TriangleError => error
+    #         #     puts error
+    #     end
+    #
     end
   end
   class TriangleError < StandardError
