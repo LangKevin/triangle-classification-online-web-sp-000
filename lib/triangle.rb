@@ -55,11 +55,11 @@ class Triangle
   end
   def kind
     if isEquilateral
-      return "equilateral"
+      return :equilateral
     elsif isIsosceles
-      return "isosceles"
+      return :isosceles
     elsif isScalene
-      return "scalene"
+      return :scalene
     else
         begin
             raise TriangleError
